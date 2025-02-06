@@ -17,7 +17,7 @@ This program was designed for my children to have a fun/interactive way to pract
 👉 Select the Words folder<br>
 👉 Select Finish<br>
 <br>
-👉 Once the project is imported, ensure your run configuration is set for Java Application, and then the program should be ready to run!
+👉 Once the project is imported, ensure your run configuration is set for Java Application, and then the program should be ready to run!<br>
 
 📌 The program driver is Driver.java
 
