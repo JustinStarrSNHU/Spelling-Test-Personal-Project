@@ -18,7 +18,7 @@ This program was designed for my children to have a fun/interactive way to pract
 👉 Select Finish<br>
 <br>
 👉 Once the project is imported, ensure your run configuration is set for Java Application, and then the program should be ready to run!<br>
-
+<br>
 📌 The program driver is Driver.java
 
 📌 Follow the instructions as prompted for the program to create the needed resource file for the program to function correctly.
