@@ -70,15 +70,21 @@ public class Driver {
 	
 	public void displayMainMenu() {
 
+		System.out.println("--------------- SPELLING TEST APP ---------------");
+		System.out.println("");
 		System.out.println("[1]  Create New List of Words"); 
 		System.out.println("");
 		System.out.println("[2]  Display List of Words");
+		System.out.println("");
 		System.out.println("[3]  Add Word to List of Words");
+		System.out.println("");
 		System.out.println("[4]  Remove Word From List of Words");
 		System.out.println("");
-		System.out.println("");
 		System.out.println("[7]  Take Spelling Test");
+		System.out.println("");
 		System.out.println("[0]  Exit (Automatic Saving)");
+		System.out.println("");
+		System.out.println("-------------------------------------------------");
 	}
 	
 	public void displayErrorMessage() {
@@ -166,6 +172,10 @@ public class Driver {
 		catch (FileNotFoundException e) {
 			//e.printStackTrace();
 			while(true) {
+				System.out.println("--------------- SPELLING TEST APP ---------------");
+				System.out.println("");
+				System.out.println("Welcome!");
+				System.out.println("");
 				System.out.println("Is this your first time running this program? [Y/N]");
 				Scanner scanner3 = new Scanner(System.in);
 				char c = scanner3.next().charAt(0);
@@ -191,6 +201,7 @@ public class Driver {
 	
 	public void createNewCsvFile(boolean firstTime) {
 		
+		@SuppressWarnings("resource")
 		Scanner scanner8 = new Scanner(System.in);
 		
 		boolean createNewList = false;
@@ -233,12 +244,8 @@ public class Driver {
 				file.delete();
 			}
 			
-			ListIterator<Word> litr2 = wordList.listIterator();
-			
 			//clears wordList so that on exiting, the csv file is not re-populated with old words
 			wordList.clear();
-			
-			File file = new File(rootDirectory);
 			
 			Path path = Paths.get(rootDirectory);
 			if (Files.notExists(path)) {
@@ -250,7 +257,7 @@ public class Driver {
 				}
 			}
 			else {
-				System.out.println("Spelling list already exists.");
+				System.out.println("Spelling List Created Successfully");// This is reached if the resource folder already exists.
 			}
 			
 			// for remaking the csv file
@@ -266,11 +273,11 @@ public class Driver {
 				e.printStackTrace();
 			}
 		}	
-		
 	}
 	
 	public void addWord() {
 			
+		@SuppressWarnings("resource")
 		Scanner scanner5 = new Scanner(System.in);
 		String tempWord = "";
 
@@ -336,6 +343,7 @@ public class Driver {
 		if (wordList.size() > 0) {
 			System.out.println("What word would you like to remove?");
 			
+			@SuppressWarnings("resource")
 			Scanner scanner4 = new Scanner(System.in);
 			String wordToRemove = scanner4.nextLine();
 			System.out.println(wordToRemove);
@@ -393,6 +401,7 @@ public class Driver {
 			System.out.println("When you are ready, press the enter key to record the sound of the word you are adding to the list.");
 			System.out.println("You will have five seconds to record the sound of the word.");
 			
+			@SuppressWarnings("resource")
 			Scanner scanner6 = new Scanner(System.in);
 			scanner6.nextLine();
 					
@@ -401,7 +410,7 @@ public class Driver {
 	        Thread stopper = new Thread(new Runnable() {
 	            public void run() {
 	                try {
-	                    Thread.sleep(recorder.RECORD_TIME);
+	                    Thread.sleep(JavaSoundRecorder.RECORD_TIME);
 	                } catch (InterruptedException ex) {
 	                    ex.printStackTrace();
 	                }
@@ -480,6 +489,7 @@ public class Driver {
 			spellingList.add(tempWord);
 		}
 		
+		@SuppressWarnings("resource")
 		Scanner scanner7 = new Scanner(System.in);
 		
 		Word word = null;
