@@ -8,15 +8,15 @@ Hello, and welcome to the Spelling Test Repository of my Personal Projects 🖐�
 
 This program was designed for my children to have a fun/interactive way to practice their spelling words for school.
 
-> 📌 To get started:
-👉 download the Words zipped folder and place it into the desired eclipse workspace.
-👉 Extract the zipped folder to the same location.
-👉 In eclipse (workspace previosuly chosen), import the project by navigating to import from the main file menu.
-👉 Under General, Select Existing Projects into Workspace
-👉 Select Select the extracted Words Folder
-👉 Select the Words folder
-👉 Select Finish
-
+> 📌 To get started:<br>
+👉 download the Words zipped folder and place it into the desired eclipse workspace.<br>
+👉 Extract the zipped folder to the same location.<br>
+👉 In eclipse (workspace previosuly chosen), import the project by navigating to import from the main file menu.<br>
+👉 Under General, Select Existing Projects into Workspace<br>
+👉 Select Select the extracted Words Folder<br>
+👉 Select the Words folder<br>
+👉 Select Finish<br>
+<br>
 👉 Once the project is imported, ensure your run configuration is set for Java Application, and then the program should be ready to run!
 
 📌 The program driver is Driver.java
